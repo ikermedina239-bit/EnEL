@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En el Mapa | Catálogos Web Express y Google Maps en Aguascalientes</title>
+  <meta name="description" content="Ponemos tu negocio en Google Maps y listo para vender por WhatsApp en 24 horas en Aguascalientes, México. Catálogos web rápidos sin comisiones por venta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            navy: '#0F172A',
+            deepblue: '#1E3A8A',
+            brandblue: '#2563EB',
+            surface: '#F8FAFC',
+            wa: '#10B981',
+            wahover: '#059669',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #FFFFFF;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body class="bg-white text-navy font-sans selection:bg-brandblue/15 selection:text-navy">
+
+  <!-- Barra de navegación superior -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logotipo tipográfico -->
+        <a href="#" class="inline-flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brandblue rounded">
+          <span class="w-2.5 h-2.5 rounded-full bg-wa shrink-0" aria-hidden="true"></span>
+          <span class="text-base sm:text-lg font-bold tracking-tight text-navy">En el Mapa</span>
+        </a>
+
+        <!-- Navegación escritorio -->
+        <nav class="hidden md:flex items-center gap-7" aria-label="Navegación principal">
+          <a href="#que-incluye" class="text-sm font-medium text-navy/80 hover:text-brandblue transition-colors">Qué incluye</a>
+          <a href="#como-funciona" class="text-sm font-medium text-navy/80 hover:text-brandblue transition-colors">Cómo funciona</a>
+          <a href="#precios" class="text-sm font-medium text-navy/80 hover:text-brandblue transition-colors">Precios</a>
+        </nav>
+
+        <!-- Botón CTA escritorio + botón menú móvil -->
+        <div class="flex items-center gap-3">
+          <a
+            href="https://wa.me/524491251874"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-wa-key="nav"
+            class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-wa hover:bg-wahover rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-wa"
+          >
+            Cotizar por WhatsApp
+          </a>
+
+          <button
+            type="button"
+            id="mobile-menu-btn"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-slate-200 text-navy hover:bg-surface focus:outline-none focus-visible:ring-2 focus-visible:ring-brandblue"
+          >
+            <svg id="icon-menu-open" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="7" x2="20" y2="7"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="17" x2="20" y2="17"></line>
+            </svg>
+            <svg id="icon-menu-close" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+      <nav class="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-3" aria-label="Navegación móvil">
+        <a href="#que-incluye" class="mobile-nav-link text-sm font-medium text-navy py-1.5 hover:text-brandblue">Qué incluye</a>
+        <a href="#como-funciona" class="mobile-nav-link text-sm font-medium text-navy py-1.5 hover:text-brandblue">Cómo funciona</a>
+        <a href="#precios" class="mobile-nav-link text-sm font-medium text-navy py-1.5 hover:text-brandblue">Precios</a>
+        <a
+          href="https://wa.me/524491251874"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-wa-key="nav"
+          class="mt-2 inline-flex items-center justify-center w-full px-4 py-2.5 text-sm font-semibold text-white bg-wa hover:bg-wahover rounded-md transition-colors"
+        >
+          Cotizar por WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección Hero -->
+    <section class="bg-white pt-14 pb-16 sm:pt-20 sm:pb-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded border border-slate-200 bg-surface text-xs font-semibold uppercase tracking-wider text-deepblue mb-6">
+            <span>Aguascalientes, México</span>
+            <span class="text-slate-300" aria-hidden="true">/</span>
+            <span>Entrega en 24 horas</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-navy leading-[1.12]">
+            Ponemos tu negocio en Google Maps y listos para vender por WhatsApp en 24 horas.
+          </h1>
+
+          <p class="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+            Creamos catálogos digitales rápidos y ligeros conectados directo a tu WhatsApp, sin comisiones por venta ni rentas mensuales obligatorias.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <a
+              href="#como-funciona"
+              class="inline-flex items-center justify-center px-6 py-3 text-sm sm:text-base font-semibold text-white bg-wa hover:bg-wahover rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-wa"
+            >
+              Ver demostración en vivo
+            </a>
+            <a
+              href="https://wa.me/524491251874"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-wa-key="hero"
+              class="inline-flex items-center justify-center px-6 py-3 text-sm sm:text-base font-semibold text-brandblue bg-white border border-brandblue hover:bg-surface rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brandblue"
+            >
+              Hablar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Ficha técnica resumida -->
+        <dl class="mt-14 pt-8 border-t border-slate-200 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <dt class="text-xs font-medium uppercase tracking-wider text-slate-500">Tiempo de entrega</dt>
+            <dd class="mt-1 text-lg font-semibold text-navy">24 horas</dd>
+          </div>
+          <div>
+            <dt class="text-xs font-medium uppercase tracking-wider text-slate-500">Comisión por venta</dt>
+            <dd class="mt-1 text-lg font-semibold text-navy tabular-nums">0%</dd>
+          </div>
+          <div>
+            <dt class="text-xs font-medium uppercase tracking-wider text-slate-500">Pago único</dt>
+            <dd class="mt-1 text-lg font-semibold text-navy tabular-nums">$2,200 MXN</dd>
+          </div>
+          <div>
+            <dt class="text-xs font-medium uppercase tracking-wider text-slate-500">Cobertura local</dt>
+            <dd class="mt-1 text-lg font-semibold text-navy">Aguascalientes, Ags.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Sección de Beneficios -->
+    <section id="que-incluye" class="bg-white border-t border-slate-200 py-16 sm:py-20 scroll-mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-wider text-brandblue">Qué incluye</p>
+          <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-navy">
+            Todo lo esencial para recibir clientes cercanos y pedidos ordenados.
+          </h2>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Beneficio 1 -->
+          <article class="bg-surface border border-slate-200 rounded-lg p-6 flex flex-col">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-10 h-10 rounded-md bg-white border border-slate-200 flex items-center justify-center text-deepblue">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"></path>
+                  <circle cx="12" cy="11" r="2.5"></circle>
+                </svg>
+              </div>
+              <span class="text-xs font-mono font-medium text-slate-400">01</span>
+            </div>
+            <h3 class="text-lg font-semibold text-navy">Presencia real en Google Maps</h3>
+            <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+              Creación, verificación y optimización de ubicación, horarios y fotos para que clientes cercanos te encuentren.
+            </p>
+          </article>
+
+          <!-- Beneficio 2 -->
+          <article class="bg-surface border border-slate-200 rounded-lg p-6 flex flex-col">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-10 h-10 rounded-md bg-white border border-slate-200 flex items-center justify-center text-deepblue">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+                  <line x1="8" y1="8" x2="16" y2="8"></line>
+                  <line x1="8" y1="12" x2="16" y2="12"></line>
+                  <line x1="8" y1="16" x2="12" y2="16"></line>
+                </svg>
+              </div>
+              <span class="text-xs font-mono font-medium text-slate-400">02</span>
+            </div>
+            <h3 class="text-lg font-semibold text-navy">Catálogo web sin comisiones</h3>
+            <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+              Tus clientes eligen productos, ven el total y envían su pedido armado directo a tu WhatsApp.
+            </p>
+          </article>
+
+          <!-- Beneficio 3 -->
+          <article class="bg-surface border border-slate-200 rounded-lg p-6 flex flex-col">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-10 h-10 rounded-md bg-white border border-slate-200 flex items-center justify-center text-deepblue">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="6" y="2" width="12" height="20" rx="2"></rect>
+                  <line x1="11" y1="18" x2="13" y2="18"></line>
+                </svg>
+              </div>
+              <span class="text-xs font-mono font-medium text-slate-400">03</span>
+            </div>
+            <h3 class="text-lg font-semibold text-navy">Carga instantánea en celular</h3>
+            <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+              Diseño ligero que abre al instante incluso con datos móviles, sin que el cliente tenga que descargar apps.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Demostración Interactiva -->
+    <section id="como-funciona" class="bg-surface border-t border-slate-200 py-16 sm:py-20 scroll-mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-wider text-brandblue">Cómo funciona</p>
+          <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-navy">
+            Prueba cómo reciben sus pedidos tus clientes.
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+            Ajusta las cantidades en este mini catálogo interactivo. El sistema calcula el total en tiempo real y arma el mensaje listo para enviarse por WhatsApp.
+          </p>
+        </div>
+
+        <!-- Contenedor con borde azul claro -->
+        <div class="mt-10 bg-white border-2 border-blue-200 rounded-lg overflow-hidden">
+          <!-- Barra superior de la demo -->
+          <div class="bg-surface border-b border-blue-200 px-5 py-3.5 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-brandblue" aria-hidden="true"></span>
+              <span class="text-sm font-semibold text-navy">Demo Interactiva — Cocina Local Centro</span>
+              <span class="hidden sm:inline-block text-xs text-slate-500 border-l border-slate-300 pl-2.5">Ejemplo funcional en vivo</span>
+            </div>
+            <button
+              type="button"
+              id="demo-reset-btn"
+              class="text-xs font-medium text-brandblue hover:text-deepblue underline underline-offset-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brandblue rounded"
+            >
+              Limpiar selección
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12">
+            <!-- Columna izquierda: Lista de productos -->
+            <div class="lg:col-span-7 p-5 sm:p-6">
+              <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">Productos de ejemplo</h3>
+                <span class="text-xs font-medium text-slate-500">Precios en MXN</span>
+              </div>
+
+              <div id="demo-products-list" class="divide-y divide-slate-200">
+                <!-- Generado dinámicamente por JavaScript -->
+              </div>
+            </div>
+
+            <!-- Columna derecha: Resumen y envío a WhatsApp -->
+            <div class="lg:col-span-5 bg-surface border-t lg:border-t-0 lg:border-l border-slate-200 p-5 sm:p-6 flex flex-col justify-between gap-6">
+              <div>
+                <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">Modalidad de entrega</h3>
+                <div class="mt-2.5 grid grid-cols-2 gap-2" role="group" aria-label="Modalidad de entrega">
+                  <button
+                    type="button"
+                    data-delivery="Recoger en local"
+                    class="delivery-btn px-3 py-2 text-xs font-semibold rounded border text-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brandblue"
+                  >
+                    Recoger en local
+                  </button>
+                  <button
+                    type="button"
+                    data-delivery="Envío a domicilio"
+                    class="delivery-btn px-3 py-2 text-xs font-semibold rounded border text-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brandblue"
+                  >
+                    Envío a domicilio
+                  </button>
+                </div>
+
+                <div class="mt-5">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Vista previa del mensaje</span>
+                    <span id="demo-item-count" class="text-xs font-medium text-deepblue tabular-nums">0 artículos</span>
+                  </div>
+                  <pre
+                    id="demo-message-preview"
+                    class="bg-white border border-slate-200 rounded-md p-3.5 text-xs font-mono text-navy leading-relaxed whitespace-pre-wrap break-words min-h-[140px]"
+                  ></pre>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-200">
+                <div class="flex items-baseline justify-between mb-4">
+                  <span class="text-sm font-medium text-slate-600">Total estimado</span>
+                  <span id="demo-total-price" class="text-2xl font-bold text-navy tabular-nums">$0 MXN</span>
+                </div>
+
+                <p id="demo-error-msg" class="hidden mb-3 text-xs font-medium text-deepblue bg-blue-50 border border-blue-200 rounded px-3 py-2" role="alert">
+                  Agrega al menos un producto para enviar el pedido de prueba por WhatsApp.
+                </p>
+
+                <a
+                  id="demo-wa-btn"
+                  href="https://wa.me/524491251874"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-semibold text-white bg-wa hover:bg-wahover rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-wa"
+                >
+                  <span>Enviar pedido de prueba por WhatsApp</span>
+                  <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Precios Transparentes -->
+    <section id="precios" class="bg-white border-t border-slate-200 py-16 sm:py-20 scroll-mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-wider text-brandblue">Precios transparentes</p>
+          <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-navy">
+            Sin contratos forzosos ni costos ocultos.
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+            Paga una sola vez por tu lanzamiento completo. El plan mensual es completamente opcional si prefieres que nosotros hagamos tus actualizaciones.
+          </p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <!-- Tarjeta 1: Plan Único -->
+          <article class="bg-white border-2 border-navy rounded-lg p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-block px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-deepblue bg-surface border border-slate-200 rounded">
+                  Plan Único
+                </span>
+                <span class="text-xs font-semibold text-brandblue">Entrega en 24 h</span>
+              </div>
+
+              <h3 class="mt-4 text-xl font-bold text-navy">Lanzamiento Express</h3>
+
+              <div class="mt-4 flex items-baseline gap-2">
+                <span class="text-4xl font-bold tracking-tight text-navy tabular-nums">$2,200</span>
+                <span class="text-sm font-medium text-slate-600">MXN pago único</span>
+              </div>
+
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                Implementación llave en mano para publicar tu negocio en Google Maps y comenzar a recibir pedidos por WhatsApp.
+              </p>
+
+              <ul class="mt-6 pt-6 border-t border-slate-200 space-y-3.5 text-sm text-navy">
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 mt-0.5 text-brandblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Página web catálogo personalizada con tu imagen y productos</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 mt-0.5 text-brandblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Configuración y optimización profesional de Google Maps</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 mt-0.5 text-brandblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Botón directo a WhatsApp con resumen automático de pedido</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 mt-0.5 text-brandblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Hospedaje gratuito incluido, sin comisiones por venta</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="https://wa.me/524491251874"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-wa-key="planExpress"
+                class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-semibold text-white bg-wa hover:bg-wahover rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-wa"
+              >
+                Solicitar Lanzamiento Express
+              </a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2: Plan Opcional -->
+          <article class="bg-surface border border-slate-200 rounded-lg p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-block px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600 bg-white border border-slate-200 rounded">
+                  Plan Opcional
+                </span>
+                <span class="text-xs font-medium text-slate-500">Sin plazo forzoso</span>
+              </div>
+
+              <h3 class="mt-4 text-xl font-bold text-navy">Mantenimiento Mensual</h3>
+
+              <div class="mt-4 flex items-baseline gap-2">
+                <span class="text-4xl font-bold tracking-tight text-navy tabular-nums">$250</span>
+                <span class="text-sm font-medium text-slate-600">MXN / mes</span>
+              </div>
+
+              <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                Pensado para negocios que cambian precios, promociones o productos con frecuencia y buscan delegar los ajustes.
+              </p>
+
+              <ul class="mt-6 pt-6 border-t border-slate-200 space-y-3.5 text-sm text-navy">
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 mt-0.5 text-brandblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Actualización ilimitada de precios durante el mes</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 mt-0.5 text-brandblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Cambios de menú, altas y bajas de productos o fotografías</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 mt-0.5 text-brandblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Soporte prioritario directo por WhatsApp</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 mt-0.5 text-brandblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Puedes pausar o cancelar en cualquier momento</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="https://wa.me/524491251874"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-wa-key="planMonthly"
+                class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-semibold text-white bg-wa hover:bg-wahover rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-wa"
+              >
+                Consultar Mantenimiento Mensual
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página minimalista -->
+  <footer class="bg-surface border-t border-slate-200 py-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div>
+        <div class="flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-wa shrink-0" aria-hidden="true"></span>
+          <p class="text-sm font-semibold text-navy">En el Mapa — Aguascalientes, Ags.</p>
+        </div>
+        <p class="mt-1.5 text-xs text-slate-500">
+          Catálogos web express y posicionamiento local en Google Maps.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:items-end gap-1.5">
+        <span class="text-xs font-medium uppercase tracking-wider text-slate-500">Contacto directo por WhatsApp</span>
+        <a
+          href="https://wa.me/524491251874"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-wa-key="footer"
+          class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-wa hover:bg-wahover rounded-md transition-colors tabular-nums focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-wa"
+        >
+          <span>+52 449 125 1874</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var WA_PHONE = '524491251874';
+
+      var WA_MESSAGES = {
+        nav: 'Hola, me interesa cotizar un catálogo web express y posicionamiento en Google Maps para mi negocio en Aguascalientes.',
+        hero: 'Hola, visité la página de En el Mapa y me gustaría hablar sobre cómo poner mi negocio en Google Maps y recibir pedidos por WhatsApp.',
+        planExpress: 'Hola, me interesa contratar el Plan Único Lanzamiento Express ($2,200 MXN pago único) para mi negocio.',
+        planMonthly: 'Hola, quisiera más información sobre el Plan Opcional de Mantenimiento Mensual ($250 MXN / mes).',
+        footer: 'Hola, me comunico desde el sitio web de En el Mapa para solicitar información sobre sus servicios.'
+      };
+
+      var demoState = {
+        deliveryMethod: 'Recoger en local',
+        products: [
+          {
+            id: 'prod-1',
+            name: 'Paquete Desayuno Completo',
+            description: 'Chilaquiles verdes o rojos con pollo, café de olla y pieza de pan.',
+            price: 135,
+            qty: 1
+          },
+          {
+            id: 'prod-2',
+            name: 'Orden de Tacos al Pastor (5 pzas)',
+            description: 'Tortilla hecha a mano, piña, cebolla, cilantro y salsa de la casa.',
+            price: 95,
+            qty: 0
+          },
+          {
+            id: 'prod-3',
+            name: 'Agua Fresca de Horchata (1 L)',
+            description: 'Receta artesanal fría en envase sellado lista para llevar.',
+            price: 45,
+            qty: 1
+          }
+        ]
+      };
+
+      function buildWhatsAppUrl(text) {
+        return 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(text);
+      }
+
+      function formatMXN(amount) {
+        return '$' + amount.toLocaleString('es-MX') + ' MXN';
+      }
+
+      function initStaticWhatsAppLinks() {
+        var links = document.querySelectorAll('[data-wa-key]');
+        links.forEach(function (link) {
+          var key = link.getAttribute('data-wa-key');
+          var message = WA_MESSAGES[key] || WA_MESSAGES.footer;
+          link.setAttribute('href', buildWhatsAppUrl(message));
+        });
+      }
+
+      function initMobileMenu() {
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        var iconOpen = document.getElementById('icon-menu-open');
+        var iconClose = document.getElementById('icon-menu-close');
+        var mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (!btn || !menu) return;
+
+        function setMenuOpen(isOpen) {
+          btn.setAttribute('aria-expanded', String(isOpen));
+          menu.classList.toggle('hidden', !isOpen);
+          iconOpen.classList.toggle('hidden', isOpen);
+          iconClose.classList.toggle('hidden', !isOpen);
+        }
+
+        btn.addEventListener('click', function () {
+          var currentlyOpen = btn.getAttribute('aria-expanded') === 'true';
+          setMenuOpen(!currentlyOpen);
+        });
+
+        mobileLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            setMenuOpen(false);
+          });
+        });
+      }
+
+      function generateOrderSummary() {
+        var selected = demoState.products.filter(function (item) {
+          return item.qty > 0;
+        });
+
+        if (selected.length === 0) {
+          return {
+            hasItems: false,
+            totalItems: 0,
+            totalPrice: 0,
+            previewText: 'No hay productos seleccionados.\nUsa el botón (+) para agregar productos y ver el mensaje generado automáticamente.',
+            waText: ''
+          };
+        }
+
+        var totalItems = 0;
+        var totalPrice = 0;
+        var lines = [];
+
+        selected.forEach(function (item) {
+          var subtotal = item.price * item.qty;
+          totalItems += item.qty;
+          totalPrice += subtotal;
+          lines.push('- ' + item.qty + 'x ' + item.name + ' (' + formatMXN(subtotal) + ')');
+        });
+
+        var previewLines = [
+          'Hola, quiero realizar el siguiente pedido (Demo En el Mapa):',
+          '',
+          'Modalidad: ' + demoState.deliveryMethod,
+          '',
+          'Productos:',
+          lines.join('\n'),
+          '',
+          'Total estimado: ' + formatMXN(totalPrice)
+        ];
+
+        var waLines = previewLines.concat([
+          '',
+          'Probé la demostración en vivo y me interesa un catálogo similar para mi negocio.'
+        ]);
+
+        return {
+          hasItems: true,
+          totalItems: totalItems,
+          totalPrice: totalPrice,
+          previewText: previewLines.join('\n'),
+          waText: waLines.join('\n')
+        };
+      }
+
+      function renderProductRows() {
+        var container = document.getElementById('demo-products-list');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        demoState.products.forEach(function (product) {
+          var row = document.createElement('div');
+          row.className = 'py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4';
+          row.setAttribute('data-product-row', product.id);
+
+          var info = document.createElement('div');
+          info.className = 'min-w-0 flex-1';
+
+          var titleRow = document.createElement('div');
+          titleRow.className = 'flex items-baseline justify-between sm:justify-start gap-3';
+
+          var nameEl = document.createElement('h4');
+          nameEl.className = 'text-sm sm:text-base font-semibold text-navy';
+          nameEl.textContent = product.name;
+
+          var priceEl = document.createElement('span');
+          priceEl.className = 'text-sm font-semibold text-deepblue tabular-nums shrink-0';
+          priceEl.textContent = formatMXN(product.price);
+
+          titleRow.appendChild(nameEl);
+          titleRow.appendChild(priceEl);
+
+          var descEl = document.createElement('p');
+          descEl.className = 'mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed';
+          descEl.textContent = product.description;
+
+          info.appendChild(titleRow);
+          info.appendChild(descEl);
+
+          var controlsWrap = document.createElement('div');
+          controlsWrap.className = 'flex items-center justify-between sm:justify-end gap-4 shrink-0';
+
+          var subtotalEl = document.createElement('span');
+          subtotalEl.className = 'text-xs font-medium text-slate-500 tabular-nums w-20 sm:text-right';
+          subtotalEl.setAttribute('data-subtotal-for', product.id);
+
+          var stepper = document.createElement('div');
+          stepper.className = 'inline-flex items-center border border-slate-300 rounded-md bg-white overflow-hidden';
+
+          var minusBtn = document.createElement('button');
+          minusBtn.type = 'button';
+          minusBtn.className = 'w-9 h-9 inline-flex items-center justify-center text-navy hover:bg-surface disabled:opacity-35 disabled:cursor-not-allowed transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brandblue';
+          minusBtn.setAttribute('aria-label', 'Quitar una unidad de ' + product.name);
+          minusBtn.setAttribute('data-action', 'dec');
+          minusBtn.setAttribute('data-id', product.id);
+          minusBtn.textContent = '-';
+
+          var qtyEl = document.createElement('span');
+          qtyEl.className = 'w-9 text-center text-sm font-semibold text-navy tabular-nums select-none';
+          qtyEl.setAttribute('data-qty-for', product.id);
+
+          var plusBtn = document.createElement('button');
+          plusBtn.type = 'button';
+          plusBtn.className = 'w-9 h-9 inline-flex items-center justify-center text-navy hover:bg-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brandblue';
+          plusBtn.setAttribute('aria-label', 'Agregar una unidad de ' + product.name);
+          plusBtn.setAttribute('data-action', 'inc');
+          plusBtn.setAttribute('data-id', product.id);
+          plusBtn.textContent = '+';
+
+          stepper.appendChild(minusBtn);
+          stepper.appendChild(qtyEl);
+          stepper.appendChild(plusBtn);
+
+          controlsWrap.appendChild(subtotalEl);
+          controlsWrap.appendChild(stepper);
+
+          row.appendChild(info);
+          row.appendChild(controlsWrap);
+          container.appendChild(row);
+        });
+      }
+
+      function updateDemoUI() {
+        var summary = generateOrderSummary();
+        var previewEl = document.getElementById('demo-message-preview');
+        var totalEl = document.getElementById('demo-total-price');
+        var countEl = document.getElementById('demo-item-count');
+        var waBtn = document.getElementById('demo-wa-btn');
+        var errorEl = document.getElementById('demo-error-msg');
+        var deliveryButtons = document.querySelectorAll('.delivery-btn');
+
+        demoState.products.forEach(function (product) {
+          var qtyEl = document.querySelector('[data-qty-for="' + product.id + '"]');
+          var subtotalEl = document.querySelector('[data-subtotal-for="' + product.id + '"]');
+          var decBtn = document.querySelector('[data-action="dec"][data-id="' + product.id + '"]');
+
+          if (qtyEl) qtyEl.textContent = String(product.qty);
+          if (subtotalEl) {
+            subtotalEl.textContent = product.qty > 0
+              ? formatMXN(product.price * product.qty)
+              : '$0 MXN';
+          }
+          if (decBtn) {
+            decBtn.disabled = product.qty === 0;
+          }
+        });
+
+        deliveryButtons.forEach(function (btn) {
+          var isSelected = btn.getAttribute('data-delivery') === demoState.deliveryMethod;
+          btn.setAttribute('aria-pressed', String(isSelected));
+          if (isSelected) {
+            btn.classList.add('bg-deepblue', 'text-white', 'border-deepblue');
+            btn.classList.remove('bg-white', 'text-navy', 'border-slate-300', 'hover:border-brandblue');
+          } else {
+            btn.classList.remove('bg-deepblue', 'text-white', 'border-deepblue');
+            btn.classList.add('bg-white', 'text-navy', 'border-slate-300', 'hover:border-brandblue');
+          }
+        });
+
+        if (previewEl) previewEl.textContent = summary.previewText;
+        if (totalEl) totalEl.textContent = formatMXN(summary.totalPrice);
+        if (countEl) {
+          countEl.textContent = summary.totalItems === 1
+            ? '1 artículo'
+            : summary.totalItems + ' artículos';
+        }
+
+        if (waBtn) {
+          if (summary.hasItems) {
+            waBtn.setAttribute('href', buildWhatsAppUrl(summary.waText));
+            waBtn.classList.remove('opacity-60');
+            if (errorEl) errorEl.classList.add('hidden');
+          } else {
+            waBtn.setAttribute('href', '#como-funciona');
+            waBtn.classList.add('opacity-60');
+          }
+        }
+      }
+
+      function initDemoEvents() {
+        var listContainer = document.getElementById('demo-products-list');
+        var resetBtn = document.getElementById('demo-reset-btn');
+        var waBtn = document.getElementById('demo-wa-btn');
+        var errorEl = document.getElementById('demo-error-msg');
+        var deliveryButtons = document.querySelectorAll('.delivery-btn');
+
+        if (listContainer) {
+          listContainer.addEventListener('click', function (event) {
+            var target = event.target.closest('button[data-action]');
+            if (!target) return;
+
+            var action = target.getAttribute('data-action');
+            var id = target.getAttribute('data-id');
+
+            demoState.products.forEach(function (product) {
+              if (product.id !== id) return;
+              if (action === 'inc') {
+                product.qty += 1;
+              } else if (action === 'dec' && product.qty > 0) {
+                product.qty -= 1;
+              }
+            });
+
+            updateDemoUI();
+          });
+        }
+
+        deliveryButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            demoState.deliveryMethod = btn.getAttribute('data-delivery');
+            updateDemoUI();
+          });
+        });
+
+        if (resetBtn) {
+          resetBtn.addEventListener('click', function () {
+            demoState.products.forEach(function (product) {
+              product.qty = 0;
+            });
+            updateDemoUI();
+          });
+        }
+
+        if (waBtn) {
+          waBtn.addEventListener('click', function (event) {
+            var summary = generateOrderSummary();
+            if (!summary.hasItems) {
+              event.preventDefault();
+              if (errorEl) errorEl.classList.remove('hidden');
+            }
+          });
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        initStaticWhatsAppLinks();
+        initMobileMenu();
+        renderProductRows();
+        initDemoEvents();
+        updateDemoUI();
+      });
+    })();
+  </script>
+</body>
+</html>
